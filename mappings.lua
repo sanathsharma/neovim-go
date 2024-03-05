@@ -8,7 +8,7 @@ M.dap = {
       "Add breakpoint at line"
     },
     ["<leader>dus"] = {
-      function ()
+      function()
         local widgets = require('dap.ui.widgets');
         local sidebar = widgets.sidebar(widgets.scopes);
         sidebar.open();
@@ -47,6 +47,21 @@ M.gopher = {
       "<cmd> GoTagAdd yaml <CR>",
       "Add yaml struct tags"
     }
+  }
+}
+
+M.general = {
+  n = {
+    ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window Left" },
+    ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
+    ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
+    ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
+  }
+}
+
+M.vim = {
+  i = {
+    ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
   }
 }
 
